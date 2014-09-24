@@ -1,20 +1,32 @@
 ---
-ip: "192.168.10.10"
+ip: "192.168.10.20"
 memory: 2048
 cpus: 1
 
-authorize: ~/.ssh/id_rsa.pub
+authorize: /Users/malk/.ssh/id_rsa.pub
 
 keys:
-    - ~/.ssh/id_rsa
+    - /Users/malk/.ssh/id_rsa
 
 folders:
-    - map: ~/Code
-      to: /home/vagrant/Code
+    - map: /Users/malk/Desktop/Repos/Gecko-API
+      to: /home/geckoformapi
+    - map: /Users/malk/Desktop/Repos/Gecko-API-2
+      to: /home/geckoformapi2
+    - map: /Users/malk/Desktop/Repos/Gecko-Web
+      to: /home/geckoform
+    - map: /Users/malk/Desktop/Repos/Gecko-JS
+      to: /home/geckojs
 
 sites:
-    - map: homestead.app
-      to: /home/vagrant/Code/Laravel/public
+    - map: api.geckoform.app
+      to: /home/geckoformapi/public
+    - map: api2.geckoform.app
+      to: /home/geckoformapi2/public
+    - map: geckoform.app
+      to: /home/geckoform
+    - map: geckojs.app
+      to: /home/geckojs
 
 variables:
     - key: APP_ENV

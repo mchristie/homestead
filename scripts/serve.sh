@@ -40,3 +40,11 @@ echo "$block" > "/etc/nginx/sites-available/$1"
 ln -fs "/etc/nginx/sites-available/$1" "/etc/nginx/sites-enabled/$1"
 service nginx restart
 service php5-fpm restart
+
+# Install phpunut
+
+echo "Installing phpunit"
+cd /home/
+sudo wget -q https://phar.phpunit.de/phpunit.phar
+sudo chmod +x phpunit.phar
+sudo mv phpunit.phar /usr/local/bin/phpunit
