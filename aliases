@@ -1,6 +1,9 @@
 # laravel new-app
 alias laravel="git clone -o laravel -b develop https://github.com/laravel/laravel.git"
 
+alias api="cd /home/geckoformapi"
+alias api2="cd /home/geckoformapi2"
+
 alias artisan="php artisan"
 alias migrate="php artisan migrate"
 alias serve="php artisan serve"
